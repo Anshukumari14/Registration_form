@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="contact" action="" method="post">
+            <h1>Registration Form</h1>
+            <div class="row">
+                <!-- first column -->
+                <div class="column">
+                    <fieldset>
+                        <label> First Name </label>
+                        <input type="text" placeholder="First Name *" name="name" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <label> Email </label>
+                        <input type="email" placeholder="Your email *" name="email" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <label> Batch No </label>
+                        <select>  
+                    <option value="Moduleno">Select Batch No...</option>  
+                    <option value="1">1</option>  
+                    <option value="2">2</option>  
+                    <option value="3">3</option>  
+                    <option value="4">4</option>  
+                    <option value="5">5</option>  
+                    <option value="6">6</option>  
+                    </select>
+                    </fieldset>
+
+                    <!-- adding all country code list -->
+                </div>
+
+                <!-- second column -->
+                <div class="column">
+                    <fieldset>
+                        <label> Last Name </label>
+                        <input type="text" placeholder="Last name *" name="fname" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <label> Phone Number </label>
+                        <input type="text" placeholder="Phone number *" name="phone" id="phone" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <label> Current Module </label>
+                        <select>  
+                    <option value="Moduleno">Select Current Module...</option>  
+                    <option value="1">1</option>  
+                    <option value="2">2</option>  
+                    <option value="3">3</option>  
+                    <option value="4">4</option>  
+                    <option value="5">5</option>  
+                    <option value="6">6</option>  
+                    </select>
+                    </fieldset>
+                </div>
+            </div>
+            <!-- submit button -->
+            <fieldset>
+                <button type="submit " id="button ">Submit form</button>
+            </fieldset>
+        </form>
+    </div>
+
+
+    <!-- Javascript to initialize the code list -->
+    <script>
+        var input = document.querySelector("#phone ");
+        window.intlTelInput(input, {
+            separateDialCode: true
+        });
+    </script>
+</body>
+
+</html>
